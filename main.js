@@ -157,18 +157,22 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    const sr = ScrollReveal({
-        origin: 'top',
-        distance: '60px',
-        duration: 2000,
-        delay: 200,
-        reset: false // Animations happen only once
-    })
+    if (typeof ScrollReveal !== 'undefined') {
+        const sr = ScrollReveal({
+            origin: 'top',
+            distance: '60px',
+            duration: 2000,
+            delay: 200,
+            reset: false
+        })
 
-    sr.reveal('.hero__text-wrapper', { origin: 'left' })
-    sr.reveal('.hero__image-wrapper', { origin: 'right', delay: 400 })
-    sr.reveal('.section__header', { delay: 200 })
-    sr.reveal('.experience__item', { interval: 200 })
-    sr.reveal('.gallery__item', { interval: 150 })
-    sr.reveal('.footer__content')
+        sr.reveal('.hero__text-wrapper', { origin: 'left' })
+        sr.reveal('.hero__image-wrapper', { origin: 'right', delay: 400 })
+        sr.reveal('.section__header', { delay: 200 })
+        sr.reveal('.experience__item', { interval: 200 })
+        sr.reveal('.gallery__item', { interval: 150 })
+        sr.reveal('.footer__content')
+    } else {
+        console.error('ScrollReveal is not defined. Check if scrollreveal.js is loaded correctly.')
+    }
 })
