@@ -1,516 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- #favicon -->
-    <link rel="shortcut icon" href="" type="image/x-icon">
-    <!-- #boxicons -->
+    <title>Krrish Tomar | Portfolio</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- #css -->
     <link rel="stylesheet" href="main.css">
-    <!-- #js -->
-    <script src="main.js"> </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/scrollreveal"></script>
 </head>
-
 <body>
-    <header class="header" id="header">
+    <div class="grain-overlay"></div>
+
+    <header class="header">
         <nav class="nav container">
-            <a href="#" class="nav_logo">Krrish</a>
-
+            <a href="#" class="nav__logo">Krrish<span>.</span></a>
             <div class="nav__menu">
-                <ul class="nav_list">
-                    <li class="nav_item">
-                        <a href="#home" class="nav_link active-link">
-                            <i class='bx bx-home-alt-2'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="#user" class="nav_link">
-                            <i class='bx bx-user'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="#skills" class="nav_link">
-                            <i class='bx bx-code-alt'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="#education" class="nav_link">
-                            <i class='bx bx-glasses-alt'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="#achievements" class="nav_link">
-                            <i class='bx bx-trophy'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="#blogs" class="nav_link">
-                            <i class='bx bx-book-alt'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="#contact" id="contact-link" class="nav_link">
-                            <i class='bx bxs-contact'></i>
-                        </a>
-                    </li>
+                <ul class="nav__list">
+                    <li><a href="#work" class="nav__link">Selected Work</a></li>
+                    <li><a href="#experience" class="nav__link">Timeline</a></li>
+                    <li><a href="#about" class="nav__link">About</a></li>
                 </ul>
             </div>
-
-            <!-- Theme toggle -->
-            <i class='bx bx-moon change-theme' id="theme-button"></i>
-
+            <div class="nav__actions">
+                <div class="theme-toggle" id="theme-button">
+                    <i class='bx bx-moon'></i>
+                </div>
+            </div>
         </nav>
     </header>
-    <!-- ######### Main ########## -->
+
     <main class="main">
-        <section class="home__section" id="home">
-            <div class="home__container container grid">
-                <div class="home__data">
-                    <span class="greeting">Hello, I'm</span>
-                    <h1 class="home__name">Krrish Tomar</h1>
-                    <h4 class="home__education">Student</h3>
-
-                    <div class="home__buttons">
-                        <a href="functionalsample.pdf" class="button button--ghost cv">
-                            Download CV
-                        </a>
-                        <a href="#user" class="button cv">About me</a>
-                    </div>
-                </div>
-
-                <div class="home__handle">
-                    <img src="giga.png" alt=""
-                        class="home__img">
-                </div>
-            </div>
-        </section>
-
-        <section class="about section" id="user">
-            <span class="section__subtitle">My Intro</span>
-            <h2 class="section__title">About Me</h2>
-            <div class="about__container container grid"></div>
-            <div class="about_img">
-                <img src="abtimg.jpg" alt="" class="abimg">
-            </div>
-            <div class="about__data">
-                <div class="about__info">
-
-                    <div class="about__box">
-                        <i class='bx bx-award about__icon'></i>
-                        <h3 class="about__title">student</h3>
-                        <span class="about__title">
-                        </span>
-                    </div>
-
-                    <div class="about__box">
-                        <i class='bx bx-search about__icon'></i>
-                        <h3 class="about__title">researcher</h3>
-                        <span class="about__title">
-                        </span>
-                    </div>
-
-                    <div class="about__box">
-                        <i class='bx bx-music about__icon'></i>
-                        <h3 class="about__title">musician</h3>
-                        <span class="about__title">
-                        </span>
-                    </div>
-                </div>
-
-                <p class="about__description">
-                    Hi, I'm Krrish. I'm a first year computer science student at IIIT Hyderabad. I like learning new
-                    stuff. I enjoy delving into subjects like science, philosphy and music. My hobbies include
-                    beatboxing, listening to music,playing piano, solving rubik's cubes and watching movies.
-                </p>
-
-                <a href="#contact" class="button button--ghost">Contact Me</a>
-            </div>
-        </section>
-
-        <!-- ############## skills ############## -->
-        <section class="skills section" id="skills">
-            <span class="section__subtitle">Skills</span>
-            <h2 class="section__title">My Abilities</h2>
-
-            <div class="skills__container container grid">
-
-                <div class="skills__content">
-                    <h3 class="skills__title">Technical Skills</h3>
-
-                    <div class="skills__box">
-                        <div class="skills__group">
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">HTML</h3>
-                                    <span class="skills__level">Basic</span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">CSS</h3>
-                                    <span class="skills__level">Intermediate</span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">JavaScript</h3>
-                                    <span class="skills__level">Basic</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills__group">
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">C</h3>
-                                    <span class="skills__level"></span>Intermediate</span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Python</h3>
-                                    <span class="skills__level">Intermediate</span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Git</h3>
-                                    <span class="skills__level">Basic</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="skills__content">
-                    <h3 class="skills__title">Non-Technical Skills</h3>
-                    <div class="skills__box">
-
-                        <div class="skills__group">
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Football</h3>
-                                    <span class="skills__level">Intermediate</span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Piano</h3>
-                                    <span class="skills__level">Basic</span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Beatbox</h3>
-                                    <span class="skills__level">Advance</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills__group">
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Chess</h3>
-                                    <span class="skills__level"></span>Intermediate</span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Photography</h3>
-                                    <span class="skills__level">Intermediate</span>
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Badminton</h3>
-                                    <span class="skills__level">Intermediate</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="educational background" id="education">
-            <span class="section__subtitle">Education</span>
-            <h2 class="section__title">Educational Background</h2>
-
-            <div class="educ__container container grid">
-                <div class="ecard educ__card1">
-                    <h3 class="educ__title">JP Academy</h3>
-                    <h4 class="educ__subtitle">2007-2019</h4>
-                    <a href="http://www.jpacademymeerut.in/about.php" class="educ__button">
-                        See more <i class='bx bx-right-arrow-alt educ__icon'></i>
-                    </a>
-
-                </div>
-
-                <div class="ecard educ__card2">
-                    <h3 class="educ__title">MIET Public School</h3>
-                    <h4 class="educ__subtitle">2019-2023</h4>
-                    <a href="https://mietschool.ac.in" class="educ__button">
-                        See more <i class='bx bx-right-arrow-alt educ__icon'></i>
+        <section class="hero section" id="about">
+            <div class="hero__container container">
+                <div class="hero__text-wrapper">
+                    <h1 class="hero__title">
+                        <span>Developer.</span>
+                        <span>Researcher.</span>
+                        <span><i>Curious.</i></span>
+                    </h1>
+                    <p class="hero__description">
+                        I am Krrish Tomar, a Dual Degree student at <b>IIIT Hyderabad</b>, 
+                        pursuing a B.Tech in <b>Computer Science</b> and MS in <b>Computational Human Sciences</b> by research.
+                        My academic journey is driven by a deep interest in the intersection of science and technology with the human experience. Beyond my core research in the <b>philosophy of technology</b>, I am passionate about exploring the worlds of music and science
+                    </p>
+                    <a href="functionalsample.pdf" download="Krrish_Tomar_Resume.pdf" class="btn hero__resume-btn">
+                        Download Resume <i class='bx bx-down-arrow-alt'></i>
                     </a>
                 </div>
+                <div class="hero__image-wrapper">
+                    <img src="abtimg.jpg" alt="Krrish Tomar" class="hero__img">
+                    <div class="hero__shape"></div>
+                </div>
+            </div>
+        </section>
 
-                <div class="ecard educ__card3">
-                    <h3 class="educ__title">IIIT Hyderabad</h3>
-                    <h4 class="educ__subtitle">2023-Present</h4>
-                    <a href="https://www.iiit.ac.in/" class="educ__button">
-                        See more <i class='bx bx-right-arrow-alt educ__icon'></i>
+        <section class="section" id="experience">
+            <div class="container">
+                <h2 class="section__header">Experience</h2>
+                    <div class="experience__item">
+                        <span class="exp__year">2025</span>
+                        <div class="exp__info">
+                            <h3>Full Stack Developer</h3>
+                            <span class="exp__company">ICanCare Startup</span>
+                            <p>Engineered a MERN platform for cancer case management with AI integration.</p>
+                        </div>
+                    </div>
+
+                    <div class="experience__item">
+                        <span class="exp__year">2024—Pres.</span>
+                        <div class="exp__info">
+                            <h3>Researcher</h3>
+                            <span class="exp__company">Human Science Research Centre</span>
+                            <p>Exploring themes in Philosophy of Technology.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="work">
+            <div class="container">
+                <h2 class="section__header">Selected Projects</h2>
+                <div class="gallery">
+                    
+                    <a href="https://github.com/kRrIsH-T/Megathon25" target="_blank" class="gallery__item featured">
+                        <div class="gallery__content">
+                            <span class="gallery__tag">AI / Python</span>
+                            <h3 class="gallery__title">Megathon '25 Winner</h3>
+                            <p class="gallery__desc">AI- Powered Multimodal claims assessment system.</p>
+                            <span class="gallery__arrow"><i class='bx bx-right-arrow-alt'></i></span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/kRrIsH-T/mini-project2" target="_blank" class="gallery__item">
+                        <div class="gallery__content">
+                            <span class="gallery__tag">Networks / C</span>
+                            <h3 class="gallery__title">mini-project 2</h3>
+                            <p class="gallery__desc">Virtual Memory, Network Packet Sniffer, and Multithreaded Simulation.</p>
+                            <span class="gallery__arrow"><i class='bx bx-right-arrow-alt'></i></span>
+                        </div>
+
+                    </a>
+
+                    <a href="https://github.com/kRrIsH-T/mini-project1" target="_blank" class="gallery__item">
+                        <div class="gallery__content">
+                            <span class="gallery__tag">Networks / C</span>
+                            <h3 class="gallery__title">mini-project 1</h3>
+                            <p class="gallery__desc">Custom Networking, Shell, and xv6 OS Extensions.</p>
+                            <span class="gallery__arrow"><i class='bx bx-right-arrow-alt'></i></span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/kRrIsH-T/BUYSELL-IIITH" target="_blank" class="gallery__item">
+                        <div class="gallery__content">
+                            <span class="gallery__tag">Web / MERN</span>
+                            <h3 class="gallery__title">Buy & Sell</h3>
+                            <p class="gallery__desc">Campus marketplace platform created using MERN STACK.</p>
+                            <span class="gallery__arrow"><i class='bx bx-right-arrow-alt'></i></span>
+                        </div>
+                    </a>
+
+                     <a href="https://github.com/kRrIsH-T/reditanalysis" target="_blank" class="gallery__item">
+                        <div class="gallery__content">
+                            <span class="gallery__tag">NLP / Python</span>
+                            <h3 class="gallery__title">Reddit Analysis</h3>
+                            <p class="gallery__desc">Sentiment analysis & visualization.</p>
+                            <span class="gallery__arrow"><i class='bx bx-right-arrow-alt'></i></span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/kRrIsH-T/course-project" target="_blank" class="gallery__item featured-bottom">
+                        <div class="gallery__content">
+                            <span class="gallery__tag">Systems / C</span>
+                            <h3 class="gallery__title">Distributed File System</h3>
+                            <p class="gallery__desc">Concurrent, Persistent, Multi-User Network File System </p>
+                            <span class="gallery__arrow"><i class='bx bx-right-arrow-alt'></i></span>
+                        </div>
                     </a>
                 </div>
             </div>
         </section>
-        <!-- ################### ACHIEVEMENTS ###################### -->
-        <section class="achievements" id="achievements">
-            <span class="section__subtitle">achievements</span>
-            <h2 class="section__title">My Achievements</h2>
-            <div class="skills__container container grid">
 
-                <div class="skills__content">
-                    <h3 class="skills__title">Academic Achievements</h3>
-
-                    <div class="skills__box">
-                        <div class="skills__group">
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Scored 96% in Class 10</h3>
-                                    <!-- <span class="skills__level">Basic</span> -->
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Scored 96% in Class 12</h3>
-                                    <!-- <span class="skills__level">Intermediate</span> -->
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name"> Won Nobel Prize in Physics</h3>
-                                    <!-- <span class="skills__level">Basic</span> -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills__group">
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">AIR 191 UGEE</h3>
-                                    <!-- <span class="skills__level"></span>Intermediate</span> -->
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Won Turing Award</h3>
-                                    <!-- <span class="skills__level">Intermediate</span> -->
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">AIR 1 JEE Adv</h3>
-                                    <!-- <span class="skills__level">Basic</span> -->
-                                </div>
-                            </div>
-                        </div>
+        <footer class="footer section">
+            <div class="container">
+                <div class="footer__content">
+                    <h2 class="footer__title">Connect with <br><i>me</i></h2>
+                    <div class="footer__links">
+                        <a href="mailto:krrish.tomar@research.iiit.ac.in">Email</a>
+                        <a href="https://github.com/krrish-T">Github</a>
+                        <a href="https://linkedin.com/in/krrish-tomar-3128472b2/">LinkedIn</a>
                     </div>
                 </div>
-
-
-                <div class="skills__content">
-                    <h3 class="skills__title">Cultural/Sport Achievements</h3>
-                    <div class="skills__box">
-
-                        <div class="skills__group">
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">100m race olympics gold medalist</h3>
-                                    <!-- <span class="skills__level">Intermediate</span> -->
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Oscar Award for best Acting</h3>
-                                    <!-- <span class="skills__level">Basic</span> -->
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Grammys award for best song</h3>
-                                    <!-- <span class="skills__level">Advance</span> -->
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="skills__group">
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">1st place GBB</h3>
-                                    <!-- <span class="skills__level"></span>Intermediate</span> -->
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Won Ballon d'Or Award</h3>
-                                    <!-- <span class="skills__level">Intermediate</span> -->
-                                </div>
-                            </div>
-
-                            <div class="skills__data">
-                                <i class='bx bxs-badge-check'></i>
-
-                                <div>
-                                    <h3 class="skills__name">Won Davis Cup</h3>
-                                    <!-- <span class="skills__level">Intermediate</span> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- #################### BLOGS #######################    -->
-        <section class="blogs" id="blogs">
-            <span class="section__subtitle">quick reads</span>
-            <h2 class="section__title">Blogs</h2>
-            <div class="blog">
-                <img src="" alt="" class="blog__img">
-                <h3 class="class blog_heading">How watching anime may cause ligma</h3>
-                <p>Lately, a lot of people have gotten affected by Ligma due to watching a lot of anime<br>
-                    <a href="blog1.html" class="educ__button4">
-                        Read more <i class='bx bx-right-arrow-alt educ__icon'></i>
-                    </a>
-                </p>
-
-                <i class='bx bx-heart' id="heart-button"></i>
-                <span id="like-counter">0</span>
-
-            </div>
-
-            <div class="blog">
-                <h3 class="class blog_heading">The Rise of BTS Femboy Fans </h3>
-                <p>In the vibrant and diverse world of BTS fandom, there's a fabulous wave gaining momentum—meet the BTS
-                    femboy fans, breaking stereotypes, and celebrating self-expression with unmatched style and
-                    enthusiasm.<br>
-                    <a href="blog2.html" class="educ__button4">
-                        Read more <i class='bx bx-right-arrow-alt educ__icon'></i>
-                    </a>
-                </p>
-                <i class='bx bx-heart' id="heart-button2"></i>
-                <span id="like-counter2">0</span>
-            </div>
-
-        </section>
-        <!-- ################# Footer ################### -->
-        <footer class="footer" id="contact">
-            <div class="footer__container container">
-                <h1 class="footer__title">My Socials</h1>
-                <ul class="footer__list">
-                    <li>
-                        <a href="https://www.instagram.com/krrsh3.14tomar/" class="cont__link ins">
-                            <i class='bx bxl-instagram'></i>
-                        </a>
-
-                        <a href="https://github.com/kRrIsH-T" class="cont__link git">
-                            <i class='bx bxl-github'></i>
-                        </a>
-
-                        <a href="https://open.spotify.com/user/zwmxjnyxyp0788rozyeay1ujz" class="cont__link mail">
-                            <i class='bx bxl-spotify'></i>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/krrish-tomar-3128472b2/" class="cont__link link">
-                            <i class='bx bxl-linkedin'></i>
-                        </a>
-
-                        <a href="mailto:krrish.tomar@research.iiit.ac.in" class="cont__link link">
-                            <i class='bx bx-mail-send'></i>
-                        </a>
-                    </li>
-                </ul>
-
-                <span class="copyr">
-                    &#169; Krrish Tomar, All rights reserved
-                </span>
             </div>
         </footer>
     </main>
+    <script src="main.js"></script>
 </body>
+</html>

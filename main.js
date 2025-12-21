@@ -70,31 +70,32 @@ function scrollActive() {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 58; 
         const sectionId = current.getAttribute('id');
-        const sectionsClass = document.querySelector('.nav_list a[href*=' + sectionId + ']');
+        const sectionsClass = document.querySelector('.nav__list a[href*=' + sectionId + ']');
 
-        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
-         
-            sectionsClass.classList.add('active-link');
-        } else {
-          
-            sectionsClass.classList.remove('active-link');
+        if (sectionsClass) {
+            if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+                sectionsClass.classList.add('active-link');
+            } else {
+                sectionsClass.classList.remove('active-link');
+            }
         }
     });
 }
 
 
-document.querySelectorAll('.nav_list a').forEach((link) => {
+document.querySelectorAll('.nav__list a').forEach((link) => {
     link.addEventListener('click', function (e) {
         e.preventDefault();
 
         const targetId = this.getAttribute('href').substring(1);
         const targetSection = document.getElementById(targetId);
 
-      
-        window.scrollTo({
-            top: targetSection.offsetTop - 57, 
-            behavior: 'smooth',
-        });
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop - 57, 
+                behavior: 'smooth',
+            });
+        }
     });
 });
 
@@ -112,43 +113,43 @@ window.addEventListener('scroll', scrollActive);
 
 // #################### light dark theme ##################
 
-document.addEventListener('DOMContentLoaded', (event) => {
+document.addEventListener('DOMContentLoaded', () => {
     const themeButton = document.getElementById('theme-button')
-const lightTheme = 'light-theme'
-const iconTheme = 'bx-sun'
+    const darkTheme = 'dark-theme'
+    const iconTheme = 'bx-sun'
 
+    // Previously selected topic (if user selected)
+    const selectedTheme = localStorage.getItem('selected-theme')
+    const selectedIcon = localStorage.getItem('selected-icon')
 
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+    // We obtain the current theme that the interface has by validating the dark-theme class
+    const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+    const getCurrentIcon = () => themeButton.querySelector('i').classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
 
-
-const getCurrentTheme = () => document.body.classList.contains(lightTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
-
-
-if (selectedTheme) {
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](lightTheme)
-  themeButton.classList[selectedIcon === 'bx bx-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-themeButton.addEventListener('click', () => {
-  
-    if (document.body.classList.contains(lightTheme)) {
-        document.body.classList.remove(lightTheme);
-        themeButton.classList.remove(iconTheme);
-        document.body.classList.add('dark-theme');
-        themeButton.classList.add('bx-moon');
-    } else {
-        document.body.classList.remove('dark-theme');
-        themeButton.classList.remove('bx-moon');
-        document.body.classList.add(lightTheme);
-        themeButton.classList.add(iconTheme);
+    // We validate if the user previously chose a topic
+    if (selectedTheme) {
+      // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+      document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+      themeButton.querySelector('i').classList[selectedIcon === 'bx bx-sun' ? 'add' : 'remove'](iconTheme)
     }
-    
-    localStorage.setItem('selected-theme', getCurrentTheme());
-    localStorage.setItem('selected-icon', getCurrentIcon());
-});
-});
+
+    // Activate / deactivate the theme manually with the button
+    themeButton.addEventListener('click', () => {
+        // Add/remove the dark / icon theme
+        document.body.classList.toggle(darkTheme)
+        themeButton.querySelector('i').classList.toggle(iconTheme)
+        
+        // Add animation class
+        themeButton.classList.add('rotate')
+        setTimeout(() => {
+            themeButton.classList.remove('rotate')
+        }, 500)
+
+        // We save the theme and the current icon that the user chose
+        localStorage.setItem('selected-theme', getCurrentTheme())
+        localStorage.setItem('selected-icon', getCurrentIcon())
+    })
+})
 document.addEventListener('DOMContentLoaded', (event) => {
 const sr = ScrollReveal({
     origin: 'top',
