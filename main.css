@@ -222,9 +222,17 @@ body.dark-theme .gallery__item {
     }
 }
 
-body.dark-theme .gallery__item.featured {
-    background-color: var(--text-color);
-    color: var(--bg-color);
+body.dark-theme .gallery__item.featured,
+body.dark-theme .gallery__item.featured-bottom {
+    background-color: #1c1f24; /* Match other cards in dark mode */
+    color: var(--text-color);
+    border: 1px solid var(--line-color);
+}
+
+body.dark-theme .gallery__item.featured .gallery__arrow,
+body.dark-theme .gallery__item.featured-bottom .gallery__arrow {
+    border-color: var(--line-color);
+    color: var(--text-color);
 }
 
 .gallery__item.featured .gallery__tag { color: var(--accent-color); }

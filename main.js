@@ -118,26 +118,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkTheme = 'dark-theme'
     const iconTheme = 'bx-sun'
 
-    // Previously selected topic (if user selected)
-    const selectedTheme = localStorage.getItem('selected-theme')
-    const selectedIcon = localStorage.getItem('selected-icon')
+    // Default to dark theme if no preference is saved
+    const selectedTheme = localStorage.getItem('selected-theme') || 'dark'
+    const selectedIcon = localStorage.getItem('selected-icon') || 'bx bx-sun'
+
+    // Apply the theme on load
+    if (selectedTheme === 'dark') {
+        document.body.classList.add(darkTheme)
+        themeButton.querySelector('i').classList.add(iconTheme)
+        themeButton.querySelector('i').classList.remove('bx-moon')
+    } else {
+        document.body.classList.remove(darkTheme)
+        themeButton.querySelector('i').classList.remove(iconTheme)
+        themeButton.querySelector('i').classList.add('bx-moon')
+    }
 
     // We obtain the current theme that the interface has by validating the dark-theme class
     const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-    const getCurrentIcon = () => themeButton.querySelector('i').classList.contains(iconTheme) ? 'bx bx-moon' : 'bx bx-sun'
-
-    // We validate if the user previously chose a topic
-    if (selectedTheme) {
-      // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-      document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-      themeButton.querySelector('i').classList[selectedIcon === 'bx bx-sun' ? 'add' : 'remove'](iconTheme)
-    }
+    const getCurrentIcon = () => themeButton.querySelector('i').classList.contains(iconTheme) ? 'bx bx-sun' : 'bx bx-moon'
 
     // Activate / deactivate the theme manually with the button
     themeButton.addEventListener('click', () => {
         // Add/remove the dark / icon theme
         document.body.classList.toggle(darkTheme)
         themeButton.querySelector('i').classList.toggle(iconTheme)
+        themeButton.querySelector('i').classList.toggle('bx-moon')
         
         // Add animation class
         themeButton.classList.add('rotate')
@@ -150,19 +155,20 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('selected-icon', getCurrentIcon())
     })
 })
-document.addEventListener('DOMContentLoaded', (event) => {
-const sr = ScrollReveal({
-    origin: 'top',
-    distance: '60px',
-    duration: 2500,
-    delay: 400,
-})
 
-sr.reveal('.home__data')
-sr.reveal('.home__handle',{delay:700})
-sr.reveal('.about_img')
-sr.reveal('.about__data')
-sr.reveal('.skills__data')
-sr.reveal('.ecard')
-sr.reveal('.blog')
+document.addEventListener('DOMContentLoaded', (event) => {
+    const sr = ScrollReveal({
+        origin: 'top',
+        distance: '60px',
+        duration: 2000,
+        delay: 200,
+        reset: false // Animations happen only once
+    })
+
+    sr.reveal('.hero__text-wrapper', { origin: 'left' })
+    sr.reveal('.hero__image-wrapper', { origin: 'right', delay: 400 })
+    sr.reveal('.section__header', { delay: 200 })
+    sr.reveal('.experience__item', { interval: 200 })
+    sr.reveal('.gallery__item', { interval: 150 })
+    sr.reveal('.footer__content')
 })
