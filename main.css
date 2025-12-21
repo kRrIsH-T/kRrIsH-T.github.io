@@ -1,18 +1,18 @@
 :root {
-    /* Artistic Palette */
-    --bg-color: #fdfbf7;      /* Cream / Canvas */
-    --text-color: #2d3436;    /* Soft Ink Black */
-    --accent-color: #d63031;  /* Artistic Red (Minimal usage) */
-    --line-color: #e2e0db;
+    /* Vibrant & Sophisticated Palette */
+    --bg-color: #f5f2ed;      /* Warm Off-White */
+    --text-color: #1a1a1a;    /* Deep Onyx */
+    --accent-color: #ff4757;  /* Vibrant Coral Red */
+    --line-color: #e8e4de;
     
     --font-display: 'Cormorant Garamond', serif;
     --font-body: 'Montserrat', sans-serif;
 }
 
 body.dark-theme {
-    --bg-color: #1a1a1a;
-    --text-color: #fdfbf7;
-    --line-color: #333333;
+    --bg-color: #0d0f11;      /* Deep Midnight */
+    --text-color: #ffffff;    /* Pure White */
+    --line-color: #1e2124;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -190,7 +190,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; }
 }
 
 .gallery__item {
-    background: var(--bg-color);
+    background: #ece9e2;
     padding: 2rem;
     border: 1px solid var(--line-color);
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background-color 0.4s;
@@ -201,7 +201,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; }
 }
 
 body.dark-theme .gallery__item {
-    background: #252525;
+    background: #1c1f24;
 }
 
 .gallery__item:hover {
@@ -213,12 +213,6 @@ body.dark-theme .gallery__item {
 .gallery__item.featured {
     background-color: var(--text-color);
     color: var(--bg-color);
-}
-
-.gallery__item.featured-bottom {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    border: 1px solid var(--line-color);
 }
 
 @media (min-width: 992px) {
@@ -233,16 +227,9 @@ body.dark-theme .gallery__item.featured {
     color: var(--bg-color);
 }
 
-body.dark-theme .gallery__item.featured-bottom {
-    background-color: #ffffff;
-    color: #1a1a1a;
-}
-
-.gallery__item.featured .gallery__tag,
-.gallery__item.featured-bottom .gallery__tag { color: var(--accent-color); }
+.gallery__item.featured .gallery__tag { color: var(--accent-color); }
 
 .gallery__item.featured .gallery__arrow { border-color: var(--bg-color); }
-.gallery__item.featured-bottom .gallery__arrow { border-color: #1a1a1a; }
 
 .gallery__item.featured:hover,
 .gallery__item.featured-bottom:hover { border-color: var(--accent-color); }
